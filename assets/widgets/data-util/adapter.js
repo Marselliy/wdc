@@ -481,7 +481,7 @@ define(["angular", "jsinq", "jsinq-query", "stat", "pca", "cluster"], function (
         }),
         base: { title: "Loadings PC1" }
       });
-
+		console.log("1111111111111111111111111111111",result);
       return result;
     };
 

@@ -1,5 +1,5 @@
 var generate = require("../index").ScatterSerie;
-
+console.log(generate);
 
 process.on('message', function (json) {
   delete json.hash;

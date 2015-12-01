@@ -261,7 +261,6 @@ exports.PostProcess = function(table,params){
 }
 
 exports.BarChartSerie = function(table,params){
-	  
 	  var useColumnMetadata = params.useColumnMetadata || [];
 	  var useRowMetadata = params.useRowMetadata || [];
 	  var normalize = params.normalized || false;
@@ -462,14 +461,15 @@ exports.PCAResults = function (table,params){
 // precision 			see exports.FormatValues params 	(default null)
 
 exports.ScatterSerie = function (table,params){
-	 
+
+	console.log(params);
 	 var axisXIndex = params.axisX || 0;
- 	 var normalize = params.normalized || false;
+ 	 var normalize = params.false || false;
 	 var pca = params.pca || false;
 	 var precision = params.precision || null;
 	 var useColumnMetadata = params.useColumnMetadata || [];
 	 var useRowMetadata = params.useRowMetadata || [];
-	  
+	
 
 	 // table = exports.ReduceNull(table,{direction:"Rows",mode:"Has Null"});
 
@@ -548,7 +548,6 @@ exports.Distribution = function(table,params){
 	var cumulate = params.cumulate || false;
 	var useColumnMetadata = params.useColumnMetadata || [];
 	var useRowMetadata = params.useRowMetadata || [];
-
 
 	// normalize data if needed
 	if ( normalize ) {
